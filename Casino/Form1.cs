@@ -54,26 +54,38 @@ namespace Casino
         private void tmrGiro_Tick(object sender, EventArgs e)
         {
             bool parado = true;
-            for(int i = 0; i < roleta.Length; i++)
+            for (int i = 0; i < roleta.Length; i++)
             {
                 if (tempos[i] > 0)
                 {
                     tempos[i]--;
 
                     if (tempos[i] == 0)
-                        tela[i].ForeColor = Color.Red;
+                        tela[i].ForeColor = Color.DarkRed;
+                        roleta[i]++;
 
-                    roleta[i]++;
                     if (roleta[i] == 10)
                         roleta[i] = 0;
-                    Atualizar(i);
-                    parado &= false;
+                        Atualizar(i);
+                        parado &= false;
                 }
             }
             if (parado)
             {
                 btGirar.Enabled = true;
                 tmrGiro.Enabled = false;
+                if (roleta[0] == 7 && roleta[1] == 7 && roleta[2] == 7)
+                {
+                    MessageBox.Show("VOCÊ GANHOU O PRÊMIO MÁXIMO! PARABÉNS!", "BÔNUS!");
+                }
+                else if (roleta[0] == roleta[1] && roleta[1] == roleta[2])
+                {
+                    MessageBox.Show("Parabéns! Você VENCEU!", "VITÓRIA!");
+                }
+                else
+                {
+                    MessageBox.Show("Que pena! Você perdeu, tente novamente...", "DERROTA!");
+                }
             }
         }
     }

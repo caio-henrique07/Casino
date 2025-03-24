@@ -86,5 +86,8 @@
   <ItemGroup>
     <None Include="Resources\slotopaint-gamedesign-121.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\casino2.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

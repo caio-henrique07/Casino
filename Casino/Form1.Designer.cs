@@ -39,42 +39,51 @@
             // lbl1
             // 
             this.lbl1.AutoSize = true;
-            this.lbl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl1.Location = new System.Drawing.Point(109, 74);
+            this.lbl1.BackColor = System.Drawing.Color.Gold;
+            this.lbl1.Font = new System.Drawing.Font("Copperplate Gothic Bold", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl1.Location = new System.Drawing.Point(145, 91);
+            this.lbl1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(51, 55);
+            this.lbl1.Size = new System.Drawing.Size(72, 67);
             this.lbl1.TabIndex = 0;
             this.lbl1.Text = "0";
             // 
             // lbl2
             // 
             this.lbl2.AutoSize = true;
-            this.lbl2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl2.Location = new System.Drawing.Point(267, 74);
+            this.lbl2.BackColor = System.Drawing.Color.Gold;
+            this.lbl2.Font = new System.Drawing.Font("Copperplate Gothic Bold", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl2.Location = new System.Drawing.Point(356, 91);
+            this.lbl2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl2.Name = "lbl2";
-            this.lbl2.Size = new System.Drawing.Size(51, 55);
+            this.lbl2.Size = new System.Drawing.Size(72, 67);
             this.lbl2.TabIndex = 1;
             this.lbl2.Text = "0";
             // 
             // lbl3
             // 
             this.lbl3.AutoSize = true;
-            this.lbl3.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl3.Location = new System.Drawing.Point(425, 74);
+            this.lbl3.BackColor = System.Drawing.Color.Gold;
+            this.lbl3.Font = new System.Drawing.Font("Copperplate Gothic Bold", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl3.Location = new System.Drawing.Point(567, 91);
+            this.lbl3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl3.Name = "lbl3";
-            this.lbl3.Size = new System.Drawing.Size(51, 55);
+            this.lbl3.Size = new System.Drawing.Size(72, 67);
             this.lbl3.TabIndex = 2;
             this.lbl3.Text = "0";
             // 
             // btGirar
             // 
-            this.btGirar.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btGirar.Location = new System.Drawing.Point(119, 163);
+            this.btGirar.BackColor = System.Drawing.Color.DarkRed;
+            this.btGirar.Font = new System.Drawing.Font("Copperplate Gothic Bold", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btGirar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btGirar.Location = new System.Drawing.Point(159, 201);
+            this.btGirar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btGirar.Name = "btGirar";
-            this.btGirar.Size = new System.Drawing.Size(339, 136);
+            this.btGirar.Size = new System.Drawing.Size(452, 167);
             this.btGirar.TabIndex = 3;
             this.btGirar.Text = "Girar";
-            this.btGirar.UseVisualStyleBackColor = true;
+            this.btGirar.UseVisualStyleBackColor = false;
             this.btGirar.Click += new System.EventHandler(this.btGirar_Click);
             // 
             // tmrGiro
@@ -83,13 +92,15 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(582, 361);
+            this.BackgroundImage = global::Casino.Properties.Resources.casino;
+            this.ClientSize = new System.Drawing.Size(776, 444);
             this.Controls.Add(this.btGirar);
             this.Controls.Add(this.lbl3);
             this.Controls.Add(this.lbl2);
             this.Controls.Add(this.lbl1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "CASSINOOOOO";
             this.ResumeLayout(false);
