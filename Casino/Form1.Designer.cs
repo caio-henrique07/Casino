@@ -34,53 +34,60 @@
             this.lbl3 = new System.Windows.Forms.Label();
             this.btGirar = new System.Windows.Forms.Button();
             this.tmrGiro = new System.Windows.Forms.Timer(this.components);
+            this.chbVitorias = new System.Windows.Forms.CheckBox();
+            this.lbxUltimos = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // lbl1
             // 
+            this.lbl1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl1.AutoSize = true;
             this.lbl1.BackColor = System.Drawing.Color.Gold;
-            this.lbl1.Font = new System.Drawing.Font("Copperplate Gothic Bold", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl1.Location = new System.Drawing.Point(145, 91);
+            this.lbl1.Font = new System.Drawing.Font("Copperplate Gothic Bold", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl1.Location = new System.Drawing.Point(119, 49);
             this.lbl1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(72, 67);
+            this.lbl1.Size = new System.Drawing.Size(118, 112);
             this.lbl1.TabIndex = 0;
             this.lbl1.Text = "0";
             // 
             // lbl2
             // 
+            this.lbl2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl2.AutoSize = true;
             this.lbl2.BackColor = System.Drawing.Color.Gold;
-            this.lbl2.Font = new System.Drawing.Font("Copperplate Gothic Bold", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl2.Location = new System.Drawing.Point(356, 91);
+            this.lbl2.Font = new System.Drawing.Font("Copperplate Gothic Bold", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl2.Location = new System.Drawing.Point(373, 49);
             this.lbl2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl2.Name = "lbl2";
-            this.lbl2.Size = new System.Drawing.Size(72, 67);
+            this.lbl2.Size = new System.Drawing.Size(118, 112);
             this.lbl2.TabIndex = 1;
             this.lbl2.Text = "0";
             // 
             // lbl3
             // 
+            this.lbl3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl3.AutoSize = true;
             this.lbl3.BackColor = System.Drawing.Color.Gold;
-            this.lbl3.Font = new System.Drawing.Font("Copperplate Gothic Bold", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl3.Location = new System.Drawing.Point(567, 91);
+            this.lbl3.Font = new System.Drawing.Font("Copperplate Gothic Bold", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl3.Location = new System.Drawing.Point(620, 49);
             this.lbl3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl3.Name = "lbl3";
-            this.lbl3.Size = new System.Drawing.Size(72, 67);
+            this.lbl3.Size = new System.Drawing.Size(118, 112);
             this.lbl3.TabIndex = 2;
             this.lbl3.Text = "0";
             // 
             // btGirar
             // 
+            this.btGirar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btGirar.AutoSize = true;
             this.btGirar.BackColor = System.Drawing.Color.DarkRed;
             this.btGirar.Font = new System.Drawing.Font("Copperplate Gothic Bold", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btGirar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btGirar.Location = new System.Drawing.Point(159, 201);
-            this.btGirar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btGirar.Location = new System.Drawing.Point(118, 215);
+            this.btGirar.Margin = new System.Windows.Forms.Padding(4);
             this.btGirar.Name = "btGirar";
-            this.btGirar.Size = new System.Drawing.Size(452, 167);
+            this.btGirar.Size = new System.Drawing.Size(620, 99);
             this.btGirar.TabIndex = 3;
             this.btGirar.Text = "Girar";
             this.btGirar.UseVisualStyleBackColor = false;
@@ -90,17 +97,48 @@
             // 
             this.tmrGiro.Tick += new System.EventHandler(this.tmrGiro_Tick);
             // 
+            // chbVitorias
+            // 
+            this.chbVitorias.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.chbVitorias.AutoSize = true;
+            this.chbVitorias.BackColor = System.Drawing.Color.Olive;
+            this.chbVitorias.Font = new System.Drawing.Font("Copperplate Gothic Bold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chbVitorias.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.chbVitorias.Location = new System.Drawing.Point(118, 363);
+            this.chbVitorias.Name = "chbVitorias";
+            this.chbVitorias.Size = new System.Drawing.Size(228, 48);
+            this.chbVitorias.TabIndex = 4;
+            this.chbVitorias.Text = "Vitórias";
+            this.chbVitorias.UseVisualStyleBackColor = false;
+            this.chbVitorias.CheckedChanged += new System.EventHandler(this.chbVitorias_CheckedChanged);
+            // 
+            // lbxUltimos
+            // 
+            this.lbxUltimos.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbxUltimos.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.lbxUltimos.Font = new System.Drawing.Font("Copperplate Gothic Bold", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbxUltimos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbxUltimos.FormattingEnabled = true;
+            this.lbxUltimos.ItemHeight = 37;
+            this.lbxUltimos.Location = new System.Drawing.Point(118, 460);
+            this.lbxUltimos.Name = "lbxUltimos";
+            this.lbxUltimos.Size = new System.Drawing.Size(620, 189);
+            this.lbxUltimos.TabIndex = 5;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Casino.Properties.Resources.casino;
-            this.ClientSize = new System.Drawing.Size(776, 444);
+            this.BackgroundImage = global::Casino.Properties.Resources.wallpaper;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(832, 828);
+            this.Controls.Add(this.lbxUltimos);
+            this.Controls.Add(this.chbVitorias);
             this.Controls.Add(this.btGirar);
             this.Controls.Add(this.lbl3);
             this.Controls.Add(this.lbl2);
             this.Controls.Add(this.lbl1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "CASSINOOOOO";
             this.ResumeLayout(false);
@@ -115,6 +153,8 @@
         private System.Windows.Forms.Label lbl3;
         private System.Windows.Forms.Button btGirar;
         private System.Windows.Forms.Timer tmrGiro;
+        private System.Windows.Forms.CheckBox chbVitorias;
+        private System.Windows.Forms.ListBox lbxUltimos;
     }
 }
 
