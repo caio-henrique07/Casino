@@ -81,7 +81,20 @@ namespace Casino
                 btGirar.Enabled = true;
                 tmrGiro.Enabled = false;
 
-                lbxUltimos.Items.Add($"{roleta[0]}-{roleta[1]}-{roleta[2]}");
+                string resultado = ($"{roleta[0]}-{roleta[1]}-{roleta[2]}");
+                jogadas.Add(resultado);
+                
+                if (chbVitorias.Checked)
+                {
+                    if (roleta[0] == roleta[1] && roleta[1] == roleta[2])
+                    {
+                        lbxUltimos.Items.Add(resultado);
+                    }
+                }
+                else
+                {
+                    lbxUltimos.Items.Add(resultado);
+                }
 
                 if (roleta[0] == 7 && roleta[1] == 7 && roleta[2] == 7)
                 {
@@ -98,31 +111,16 @@ namespace Casino
             }
         }
 
-        List<string> jogadas;
+        List<string> jogadas = new List<string>();
 
         private void chbVitorias_CheckedChanged(object sender, EventArgs e)
         {
-            if (chbVitorias.Checked)
-            {
-                jogadas = new List<string>();
-                foreach (string item in lbxUltimos.Items)
-                {
-                    jogadas.Add(item.ToString());
-                }
-                lbxUltimos.Items.Clear();
+            lbxUltimos.Items.Clear();
 
-                foreach (string item in jogadas)
-                {
-                    string[] partes = item.Split('-');
-                    if (partes[0] == partes[1] && partes[1] == partes[2])
-                    {
-                        lbxUltimos.Items.Add(item);
-                    }
-                }
-            }
-            else
+            foreach (string item in jogadas)
             {
-                foreach (string item in jogadas)
+                string[] partes = item.Split('-');
+                if (!chbVitorias.Checked || (partes[0] == partes[1] && partes[1] == partes[2]))
                 {
                     lbxUltimos.Items.Add(item);
                 }
