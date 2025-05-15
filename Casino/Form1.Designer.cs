@@ -44,9 +44,10 @@
             this.lbl1.AutoSize = true;
             this.lbl1.BackColor = System.Drawing.Color.Gold;
             this.lbl1.Font = new System.Drawing.Font("Copperplate Gothic Bold", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl1.Location = new System.Drawing.Point(89, 40);
+            this.lbl1.Location = new System.Drawing.Point(119, 49);
+            this.lbl1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(95, 89);
+            this.lbl1.Size = new System.Drawing.Size(118, 112);
             this.lbl1.TabIndex = 0;
             this.lbl1.Text = "0";
             // 
@@ -56,9 +57,10 @@
             this.lbl2.AutoSize = true;
             this.lbl2.BackColor = System.Drawing.Color.Gold;
             this.lbl2.Font = new System.Drawing.Font("Copperplate Gothic Bold", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl2.Location = new System.Drawing.Point(280, 40);
+            this.lbl2.Location = new System.Drawing.Point(373, 49);
+            this.lbl2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl2.Name = "lbl2";
-            this.lbl2.Size = new System.Drawing.Size(95, 89);
+            this.lbl2.Size = new System.Drawing.Size(118, 112);
             this.lbl2.TabIndex = 1;
             this.lbl2.Text = "0";
             // 
@@ -68,9 +70,10 @@
             this.lbl3.AutoSize = true;
             this.lbl3.BackColor = System.Drawing.Color.Gold;
             this.lbl3.Font = new System.Drawing.Font("Copperplate Gothic Bold", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl3.Location = new System.Drawing.Point(465, 40);
+            this.lbl3.Location = new System.Drawing.Point(620, 49);
+            this.lbl3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl3.Name = "lbl3";
-            this.lbl3.Size = new System.Drawing.Size(95, 89);
+            this.lbl3.Size = new System.Drawing.Size(118, 112);
             this.lbl3.TabIndex = 2;
             this.lbl3.Text = "0";
             // 
@@ -81,9 +84,10 @@
             this.btGirar.BackColor = System.Drawing.Color.DarkRed;
             this.btGirar.Font = new System.Drawing.Font("Copperplate Gothic Bold", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btGirar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btGirar.Location = new System.Drawing.Point(88, 175);
+            this.btGirar.Location = new System.Drawing.Point(117, 215);
+            this.btGirar.Margin = new System.Windows.Forms.Padding(4);
             this.btGirar.Name = "btGirar";
-            this.btGirar.Size = new System.Drawing.Size(465, 80);
+            this.btGirar.Size = new System.Drawing.Size(620, 98);
             this.btGirar.TabIndex = 3;
             this.btGirar.Text = "Girar";
             this.btGirar.UseVisualStyleBackColor = false;
@@ -100,10 +104,10 @@
             this.chbVitorias.BackColor = System.Drawing.Color.Olive;
             this.chbVitorias.Font = new System.Drawing.Font("Copperplate Gothic Bold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chbVitorias.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.chbVitorias.Location = new System.Drawing.Point(88, 295);
-            this.chbVitorias.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chbVitorias.Location = new System.Drawing.Point(117, 363);
+            this.chbVitorias.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chbVitorias.Name = "chbVitorias";
-            this.chbVitorias.Size = new System.Drawing.Size(182, 39);
+            this.chbVitorias.Size = new System.Drawing.Size(228, 48);
             this.chbVitorias.TabIndex = 4;
             this.chbVitorias.Text = "Vitórias";
             this.chbVitorias.UseVisualStyleBackColor = false;
@@ -116,28 +120,31 @@
             this.lbxUltimos.Font = new System.Drawing.Font("Copperplate Gothic Bold", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbxUltimos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbxUltimos.FormattingEnabled = true;
-            this.lbxUltimos.ItemHeight = 29;
-            this.lbxUltimos.Location = new System.Drawing.Point(88, 374);
-            this.lbxUltimos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lbxUltimos.ItemHeight = 37;
+            this.lbxUltimos.Location = new System.Drawing.Point(117, 460);
+            this.lbxUltimos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lbxUltimos.Name = "lbxUltimos";
-            this.lbxUltimos.Size = new System.Drawing.Size(466, 149);
+            this.lbxUltimos.Size = new System.Drawing.Size(620, 152);
             this.lbxUltimos.TabIndex = 5;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Casino.Properties.Resources.wallpaper;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(624, 673);
+            this.ClientSize = new System.Drawing.Size(832, 828);
             this.Controls.Add(this.lbxUltimos);
             this.Controls.Add(this.chbVitorias);
             this.Controls.Add(this.btGirar);
             this.Controls.Add(this.lbl3);
             this.Controls.Add(this.lbl2);
             this.Controls.Add(this.lbl1);
+            this.KeyPreview = true;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "CASSINOOOOO";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 

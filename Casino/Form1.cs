@@ -17,6 +17,8 @@ namespace Casino
         Label[] tela;
         Random r;
 
+        List<string> jogadas = new List<string>();
+
         public Form1()
         {
             InitializeComponent();
@@ -48,6 +50,7 @@ namespace Casino
             Array.Sort(tempos);
             btGirar.Enabled = false;
             tmrGiro.Enabled = true;
+
         }
 
         private void tmrGiro_Tick(object sender, EventArgs e)
@@ -65,7 +68,7 @@ namespace Casino
                     }
 
                     roleta[i]++;
-                    
+
                     if (roleta[i] == 10)
                     {
                         roleta[i] = 0;
@@ -81,20 +84,8 @@ namespace Casino
                 btGirar.Enabled = true;
                 tmrGiro.Enabled = false;
 
-                string resultado = ($"{roleta[0]}-{roleta[1]}-{roleta[2]}");
-                jogadas.Add(resultado);
-                
-                if (chbVitorias.Checked)
-                {
-                    if (roleta[0] == roleta[1] && roleta[1] == roleta[2])
-                    {
-                        lbxUltimos.Items.Add(resultado);
-                    }
-                }
-                else
-                {
-                    lbxUltimos.Items.Add(resultado);
-                }
+                // [ADICIONADO] Armazena sempre a jogada na lista, mesmo que seja derrota
+                jogadas.Add($"{roleta[0]}-{roleta[1]}-{roleta[2]}");
 
                 if (roleta[0] == 7 && roleta[1] == 7 && roleta[2] == 7)
                 {
@@ -108,22 +99,46 @@ namespace Casino
                 {
                     MessageBox.Show("Que pena! Você perdeu, tente novamente...", "DERROTA!");
                 }
+
+                AtualizarLista(); // [ADICIONADO] Atualiza a exibição conforme checkbox
             }
         }
 
-        List<string> jogadas = new List<string>();
-
-        private void chbVitorias_CheckedChanged(object sender, EventArgs e)
+        private void AtualizarLista()
         {
             lbxUltimos.Items.Clear();
 
             foreach (string item in jogadas)
             {
-                string[] partes = item.Split('-');
-                if (!chbVitorias.Checked || (partes[0] == partes[1] && partes[1] == partes[2]))
+                if (chbVitorias.Checked) // [ADICIONADO] Se checkbox ligada, filtra para mostrar só vitórias
+                {
+                    string[] partes = item.Split('-');
+                    if (partes.Length == 3 && partes[0] == partes[1] && partes[1] == partes[2])
+                    {
+                        lbxUltimos.Items.Add(item);
+                    }
+                }
+                else // [ADICIONADO] Se checkbox desligada, mostra tudo
                 {
                     lbxUltimos.Items.Add(item);
                 }
+            }
+        }
+
+        private void chbVitorias_CheckedChanged(object sender, EventArgs e)
+        {
+            AtualizarLista(); // [ADICIONADO] Atualiza a lista sempre que checkbox mudar
+        }
+
+        private void Form1_KeyDown_1(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.G)
+            {
+                btGirar_Click(this, EventArgs.Empty);
+            }
+            else if (e.KeyCode == Keys.V)
+            {
+                chbVitorias.Checked = !chbVitorias.Checked;
             }
         }
     }
